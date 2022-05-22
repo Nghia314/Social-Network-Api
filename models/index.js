@@ -1,3 +1,4 @@
-const Genre = require('./Genre');
+const Thoughts = require('./Thoughts');
+const Users = require('./Users');
 
-module.exports = { Genre };
+module.exports = { Users, Thoughts };
