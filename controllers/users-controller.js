@@ -1,13 +1,7 @@
 const { Users } = require('../models');
 
 const usersController = {
-
-    createUsers({body}, res) {
-        Users.create(body)
-        .then(dbUsersData => res.json(dbUsersData))
-        .catch(err => res.status(400).json(err));
-    },
-    getAllUsers(req, res) {
+getAllUsers(req, res) {
         Users.find({})
         .populate({path: 'thoughts', select: '-__v'})
         .populate({path: 'friends', select: '-__v'})
@@ -38,6 +32,12 @@ const usersController = {
             res.status(400).json(err)
         })
     },
+    createUsers({body}, res) {
+        Users.create(body)
+        .then(dbUsersData => res.json(dbUsersData))
+        .catch(err => res.status(400).json(err));
+    },
+    
     updataUsers({params, body}, res) {
         Users.findOneAndUpdate({_id: params.id}, body, {new: true})
         .then(dbUsersData => {
