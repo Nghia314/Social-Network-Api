@@ -38,7 +38,7 @@ getAllUsers(req, res) {
         .catch(err => res.status(400).json(err));
     },
     
-    updataUsers({params, body}, res) {
+    updateUsers({params, body}, res) {
         Users.findOneAndUpdate({_id: params.id}, body, {new: true})
         .then(dbUsersData => {
             if(!dbUsersData) {
