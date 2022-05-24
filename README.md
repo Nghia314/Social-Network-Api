@@ -10,6 +10,8 @@
 - Installation
 - Technologies
 - Demonstrate Video and result
+- Code Snippet
+
 - license
 ## Installation
 - clone the github repository
@@ -26,5 +28,18 @@
 - link to the video : https://www.youtube.com/watch?v=_1mdsSZwBsk
 - github : https://github.com/Nghia314/Social-Network-Api
 - gitHub deploylink:  https://nghia314.github.io/Social-Network-Api/
+## Code Snippet
+the following code showing how to create varible shorter and faster
+```
+const {
+    getAllThoughts,
+    getThoughtsById,
+    updateThoughts,
+    createThoughts,
+    deleteThoughts,
+    addReaction,
+    deleteReaction,
+} = require('../../controllers/thoughts-controller');
+```
 ## License
 - [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
